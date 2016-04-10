@@ -19,6 +19,9 @@
       "email": "support@almsaeedstudio.com"
     }
   ],
+  "require": {
+    "php": ">=5.4.0"
+  },
   "license": "MIT",
   "support": {
     "issues": "https://github.com/almasaeed2010/AdminLTE/issues"
