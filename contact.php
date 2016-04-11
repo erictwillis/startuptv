@@ -78,6 +78,7 @@ else                /* send the submitted data */
             require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
         //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
+            var_dump($_ENV);
 
         $mail             = new PHPMailer();
 
