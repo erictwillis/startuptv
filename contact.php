@@ -83,7 +83,7 @@ else                /* send the submitted data */
 
         $body             = "startuptv";
         $mail->IsSMTP(); // telling the class to use SMTP
-        $mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
+        $mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
         $mail->SMTPAuth   = true;                  // enable SMTP authentication
         // $mail->SMTPSecure = "";                 // sets the prefix to the servier
         $mail->Host       = $_ENV["MAILGUN_SMTP_SERVER"];      // sets GMAIL as the SMTP server
