@@ -21,7 +21,8 @@
   ],
   "require": {
     "php": ">=5.5",
-    "ext-mysql": "*"
+    "ext-mysql": "*",
+    "phpmailer/phpmailer": "^5.2"
   },
   "license": "MIT",
   "support": {

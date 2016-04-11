@@ -74,12 +74,35 @@ else                /* send the submitted data */
     if (($name=="")||($email=="")||($message=="")) 
         { 
         echo "All fields are required, please fill <a href=\"\">the form</a> again."; 
-        } 
-    else{         
-        $from="From: $name<$email>\r\nReturn-path: $email"; 
-        $subject="Message sent using your contact form"; 
-        mail("etwillis@gmail.com", $subject, $message, $from); 
-        echo "Email sent!"; 
+        } else {         
+        require_once('class.phpmailer.php');
+        //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
+
+        $mail             = new PHPMailer();
+
+        $body             = "";
+        $mail->IsSMTP(); // telling the class to use SMTP
+        $mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
+        $mail->SMTPAuth   = true;                  // enable SMTP authentication
+        $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+        $mail->Host       = $_ENV["MAILGUN_SMTP_SERVER"];      // sets GMAIL as the SMTP server
+        $mail->Port       = $_ENV["MAILGUN_SMTP_PORT"];                   // set the SMTP port for the GMAIL server
+        $mail->Username   = $_ENV["MAILGUN_SMTP_LOGIN"];  // GMAIL username
+        $mail->Password   = $_ENV["MAILGUN_SMTP_PASSWORD"];         // GMAIL password
+
+        $mail->SetFrom($email, $name);
+
+        $mail->Subject    = "Message sent using your contact form"; 
+
+        $address = "etwillis@gmail.com";
+        $mail->AddAddress($address, "Eric Willis");
+        $mail->MsgHTML($body);
+
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Email sent!";
+        }
         } 
     }   
 ?> 
