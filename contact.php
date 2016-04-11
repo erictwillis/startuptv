@@ -75,7 +75,8 @@ else                /* send the submitted data */
         { 
         echo "All fields are required, please fill <a href=\"\">the form</a> again."; 
         } else {         
-        require_once('class.phpmailer.php');
+            require 'PHPMailerAutoload.php';
+
         //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
 
         $mail             = new PHPMailer();
