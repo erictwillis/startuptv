@@ -34,9 +34,9 @@ $div3Text=$selData['div3Text'];
     <nav class="navbar">
         <div class="navbar-inner">
             <div class="container">
-                <a href="#" class="brand">     Startup TV <img id="feature-screenshot" src="img/FitnessBelt.png" alt="screenshot" style="height: 120px;"></a>
+                <a href="#" class="brand"><img id="feature-screenshot" src="img/final-text.png" alt="screenshot" style="height: 120px;"></a>
                    <ul class="nav">
-                    <li class="active" style="float: left;    padding-top: 59px;"><a href="#">Be Featured on Startup TV </a></li>
+                    <li class="active" style="text-alin:center;"><a href="/contact.php" style="padding: 29px;">Be Featured on Startup TV </a></li>
                     
                 </ul>
                
@@ -52,7 +52,7 @@ $div3Text=$selData['div3Text'];
         <header class="highlight span12" >
             <h3 style="font-size: 28px;">Startup TV gets behind the scenes of the startup world, daily. </h3> <br/>
 		<img src="img/snapus.png" style="margin:-20px;vertical-align:top;" />			
-            <img id="feature-screenshot" src="uploadImg/snapchat.png1460257196.png" alt="screenshot" style="height: 300px;">           
+            <img id="feature-screenshot" src="img/Image-11.jpg" alt="screenshot" style="height: 300px;">           
             <p style="margin-left: 36px;"><?php echo $btnText; ?></p>
 			
 		
@@ -64,7 +64,7 @@ $div3Text=$selData['div3Text'];
 <section class="section-box shadow">
     <div class="container">     	
         <div class="row">
-             <h3 style="font-size: 28px; margin-left: 36px;">Upcoming Takeovers</h3> 
+             <h3 style="font-size: 28px; text-alin:center;">Upcoming Takeovers</h3> 
     	
             <article class="span4 center-align">
                 <img src="<?php echo $div1; ?>" alt="responsive"/>                    

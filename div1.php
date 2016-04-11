@@ -53,7 +53,7 @@ $div1="active";
         <div class="col-md-12">
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Div 1 </h3>
+              <h3 class="box-title">Div 1</h3>
             </div>
             <!-- /.box-header -->
 			<form id="frm1" enctype="multipart/form-data" method="post" action="insertDivSectionDetails.php" >

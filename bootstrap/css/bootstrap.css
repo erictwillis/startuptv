@@ -1587,10 +1587,12 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+text-align :center;
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
+
   }
 }
 @media (min-width: 992px) {
@@ -4168,6 +4170,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
+    text-align: center;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4175,11 +4178,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar {
     border-radius: 4px;
+    text-align: center;
   }
 }
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
+    text-align: center;
   }
 }
 .navbar-collapse {
