@@ -81,7 +81,7 @@ else                /* send the submitted data */
 
         $mail             = new PHPMailer();
 
-        $body             = "";
+        $body             = "startuptv";
         $mail->IsSMTP(); // telling the class to use SMTP
         $mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
         $mail->SMTPAuth   = true;                  // enable SMTP authentication
@@ -93,7 +93,7 @@ else                /* send the submitted data */
 
         $mail->SetFrom($email, $name);
 
-        $mail->Subject    = "Message sent using your contact form"; 
+        $mail->Subject    = "[StartupTV] Message sent using your contact form"; 
 
         $address = "etwillis@gmail.com";
         $mail->AddAddress($address, "Eric Willis");
