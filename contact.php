@@ -78,7 +78,6 @@ else                /* send the submitted data */
             require './vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
         //include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
-            var_dump($_ENV);
 
         $mail             = new PHPMailer();
 
@@ -86,7 +85,7 @@ else                /* send the submitted data */
         $mail->IsSMTP(); // telling the class to use SMTP
         $mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
         $mail->SMTPAuth   = true;                  // enable SMTP authentication
-        $mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
+        // $mail->SMTPSecure = "";                 // sets the prefix to the servier
         $mail->Host       = $_ENV["MAILGUN_SMTP_SERVER"];      // sets GMAIL as the SMTP server
         $mail->Port       = $_ENV["MAILGUN_SMTP_PORT"];                   // set the SMTP port for the GMAIL server
         $mail->Username   = $_ENV["MAILGUN_SMTP_LOGIN"];  // GMAIL username
@@ -101,7 +100,7 @@ else                /* send the submitted data */
         $mail->MsgHTML($body);
 
         if(!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+            echo "<PRE>Mailer Error: " . $mail->ErrorInfo."</PRE>";
         } else {
             echo "Email sent!";
         }
