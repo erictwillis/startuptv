@@ -81,7 +81,7 @@ else                /* send the submitted data */
 
         $mail             = new PHPMailer();
 
-        $body             = "startuptv";
+        $body             = "startuptv\n" . $email . "\n" . $name;
         $mail->IsSMTP(); // telling the class to use SMTP
         $mail->SMTPDebug  = 0;                     // enables SMTP debug information (for testing)
         $mail->SMTPAuth   = true;                  // enable SMTP authentication
@@ -91,11 +91,10 @@ else                /* send the submitted data */
         $mail->Username   = $_ENV["MAILGUN_SMTP_LOGIN"];  // GMAIL username
         $mail->Password   = $_ENV["MAILGUN_SMTP_PASSWORD"];         // GMAIL password
 
-        $mail->SetFrom($email, $name);
-
+        $mail->SetFrom("contact@startuptv.xyz", "Contact");
         $mail->Subject    = "[StartupTV] Message sent using your contact form"; 
 
-        $address = "etwillis@gmail.com";
+        $address = "eric@startuptv.xyz";
         $mail->AddAddress($address, "Eric Willis");
         $mail->MsgHTML($body);
 
